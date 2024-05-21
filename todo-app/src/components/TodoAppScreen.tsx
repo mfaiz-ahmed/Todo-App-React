@@ -31,11 +31,13 @@ export default function TodoAppScreen() {
     // EDIT TODO BUTTON
 
     const editTodo = (i:number)=>{
-      let newText = prompt('Edit your task here')
+      let newText = prompt('Edit your task here' , textList[i])
       textList.splice(i , 1 , newText)
       setTextList([...textList])
     }
 
+
+    // RENDERING THE APP
 
   return (
     <div id='box'>
