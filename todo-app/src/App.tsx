@@ -1,7 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Input from './components/TodoAppScreen';
 
 
@@ -9,7 +8,8 @@ import Input from './components/TodoAppScreen';
 
 function App() {
   return (
-    <div className='mt-5 text-center'>
+    <div>
+      <h1 id='heading'>Todo App</h1>
       <Input/>
     </div>
   );

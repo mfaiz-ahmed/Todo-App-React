@@ -1,4 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPen, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+
 
 export default function TodoAppScreen() {
   const [text , setText] = useState('')
@@ -7,7 +10,6 @@ export default function TodoAppScreen() {
       // ADD TODO BUTTON 
 
   const addTodo = ()=>{
-    console.log(textList);
     textList.push(text)
     setTextList([...textList])
     setText('')
@@ -36,18 +38,18 @@ export default function TodoAppScreen() {
 
 
   return (
-    <div>
+    <div id='box'>
       <input className='me-3' type="text" value={text} placeholder='Enter your tasks here...' onChange={(e)=>{
         setText(e.target.value)
       }} />
-      <button className='me-3' onClick={addTodo}>Add Todo</button>
-      <button onClick={deleteAll}>Delete All</button>
+      <button className='button' onClick={addTodo}>Add</button>
+      <button className='button' onClick={deleteAll}>Delete All</button>
       {textList.map((x:any , i:number)=>{
-        return <p className='mt-3' key={i}>{x} <button onClick={()=>{
+        return <p id='list' key={i}>{x} <button className='button' onClick={()=>{
           deleteTodo(i)
-        }}>Delete</button> <button onClick={()=>{
+        }}><FontAwesomeIcon icon={faTrashCan} /></button> <button className='button' onClick={()=>{
           editTodo(i)
-        }}>Edit</button> </p>
+        }}><FontAwesomeIcon icon={faPen} /></button> </p>
           
       })}
     </div>

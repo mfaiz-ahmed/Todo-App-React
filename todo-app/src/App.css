@@ -1,4 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
 *{margin: 0;
 padding: 0;
 box-sizing: border-box;}
 
+html{font-size: 62.5%;}
+
+
+body{background-image: linear-gradient(to bottom right , #03045e , #023e8a , #0077b6 , #0096c7 , #00b4d8 , #48cae4 , #90e0ef , #ade8f4);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+min-height: 100vh;}
+
+#heading{font-family: Poetsen One;
+font-size: 10rem;
+text-align: center;
+margin-top: 3rem;
+color: white;
+margin-bottom: 3rem;}
+
+
+#box{text-align: center;
+background-color: white;
+margin: 0 auto;
+width: 70vw;
+padding: 2rem;
+min-height: 80vh;
+border: 0;
+border-radius: 1rem;}
+
+input{padding: 1.3rem;
+font-family: Poetsen One;
+font-size: 2rem;
+border-radius: 1rem;
+margin: 0.7rem;}
+
+
+input:focus{border: 0.2rem solid #00b4d8;
+outline: none;}
+
+
+
+.button{font-family: Poetsen One ;
+padding: 1rem;
+font-size: 2rem;
+margin: 0.4rem;
+cursor: pointer;
+border: 0;
+border-radius: 1rem;
+background-color: #00b4d8;
+color:white;
+transition: all 0.3s;}
+
+
+.button:hover{background-color: #023e8a;}
+
+
+#list{font-family:Poetsen One;
+font-size: 3rem;
+padding: 0.5rem;
+margin-top: 2rem;
+box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2), 0 0.6rem 2rem 0 rgba(0, 0, 0, 0.19);
+background-color: white;
+border: 0;
+border-radius: 1rem;}
+
+
+
+
+@media(max-width:998px){
+    html{font-size: 55%;}
+}
+
+
+@media(max-width:768px){
+    html{font-size: 45%;}
+}
